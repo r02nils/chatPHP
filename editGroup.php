@@ -19,11 +19,12 @@ session_start();
     <div class="bg bg2"></div>
     <div class="bg bg3"></div>
     <div class="content">
-      <h1>Create Group</h1>
+      <h1>Edit Group</h1>
       <form class="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-        <input type="text" name="name" value="" placeholder="Group name"><br>
-        <input type="text" name="users" value="" placeholder="name1, name2..."><br>
-        <input type="submit" name="btn" value="create"><br>
+        <input type="text" name="name" value="<?php $groupName = new GroupView(); $groupName->showGroupName($_SESSION['group_id']); ?>" placeholder="Group name" readonly><br>
+        <input type="text" name="users" value="" placeholder="add users"><br>
+        <input type="text" name="users" value="" placeholder="remove users"><br>
+        <input type="submit" name="btn" value="save"><br>
       </form>
       <p><a href="index.php">back</a></p>
     </div>

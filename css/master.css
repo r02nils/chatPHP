@@ -60,7 +60,7 @@ h1 {
 }
 
 input[type=text], select, textarea{
-  width: 50%;
+  width: 50% !important;
   padding: 1vh;
   border: 0.1vh solid #ccc;
   border-radius: 0.4vh;
@@ -70,7 +70,7 @@ input[type=text], select, textarea{
 }
 
 input[type=submit]{
-  width: 30%;
+  width: 30% !important;
   padding: 1vh;
   border: 0.1vh solid #ccc;
   border-radius: 0.4vh;
@@ -144,6 +144,7 @@ input[type=text]:focus{
 }
 
 .write{
+  margin:1vh;
   height: 10%;
 }
 
@@ -182,4 +183,10 @@ input[type=text]:focus{
 .msg-name{
   font-size: 1.5vh;
   text-align: left;
+}
+
+
+.smiley{
+	height: auto;
+	width:2.5vh;
 }

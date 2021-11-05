@@ -38,6 +38,7 @@ class User extends mySql
       $_SESSION['user_name'] = $user[0]['name'];
 
       echo "login successful!";
+      header("Location: index.php");
     }
     else{
       echo "login error!";
@@ -50,5 +51,6 @@ class User extends mySql
     $stmt->execute([$name,$email,$password]);
 
     echo "signup successful!";
+    header("Location: login.php");
   }
 }

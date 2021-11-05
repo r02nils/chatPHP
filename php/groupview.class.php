@@ -25,5 +25,8 @@ class GroupView extends Group
     echo "Members: ". $results[0]['count'];
   }
 
-
+  public function showGroupName($group_id){
+    $name = $this->getGroupById($group_id);
+    echo $name[0]['group_name'];
+  }
 }

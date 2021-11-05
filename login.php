@@ -1,6 +1,6 @@
 <?php
-  include 'includes/autoloader.inc.php';
-  include 'form/loginForm.php';
+  require 'includes/autoloader.inc.php';
+  require 'form/loginForm.php';
  ?>
 
 <!DOCTYPE html>
@@ -26,5 +26,6 @@
       </form>
       <p><a href="signup.php">signup</a></p>
     </div>
+    <script src="js/blockReplaceState.js" charset="utf-8"></script>
   </body>
 </html>
