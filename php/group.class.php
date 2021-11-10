@@ -70,12 +70,17 @@ class Group extends mySql
     $stmt->execute([$new]);
 
     $newResults = $stmt->fetchAll();
-    $new_id = $newResults[0]['user_id'];
 
-    $user = $stmt->fetchAll();
-    $sql = "INSERT INTO group_usert(group_id, user_id) VALUES(?,?)";
-    $stmt = $this->connect()->prepare($sql);
-    $stmt->execute([$group_id,$new_id]);
+    if(empty($newResults)==true){
+
+    }
+    else{
+      $new_id = $newResults[0]['user_id'];
+      $user = $stmt->fetchAll();
+      $sql = "INSERT INTO group_usert(group_id, user_id) VALUES(?,?)";
+      $stmt = $this->connect()->prepare($sql);
+      $stmt->execute([$group_id,$new_id]);
+    }
 
     $results = $stmt->fetchAll();
     return $results;

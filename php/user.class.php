@@ -21,7 +21,7 @@ class User extends mySql
   }
 
   protected function setUser($name, $email, $password){
-    $sql = "INSERT INTO usert(name, email, password) VALUES(?,?,?);";
+    $sql = "INSERT INTO usert(name, email, password) VALUES(?,?,?)";
     $stmt = $this->connect()->prepare($sql);
     $stmt->execute([$name,$email,$password]);
   }

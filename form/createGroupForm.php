@@ -1,6 +1,6 @@
 <?php
 
-if(isset($_POST['btn'])){
+if(isset($_POST['createGroupBtn'])){
   $name = $_POST['name'];
   $users = $_POST['users'];
   $user_id = $_SESSION['user_id'];

@@ -10,7 +10,7 @@ class GroupView extends Group
       echo "</div>";
     }
     echo "<div class='group'>";
-    echo "<a href='createGroup.php'>create Group</a>";
+    echo "<p><a href='#ex1' rel='modal:open'>create group</a></p>";
     echo "</div>";
   }
 
